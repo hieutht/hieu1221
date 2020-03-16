@@ -42,22 +42,25 @@ public class Othermain {
                 System.out.println("==================================================================================================================================================");
                 break;
             case 2:
-                System.out.println("==================================================================================================================================================");
-                if (list.size() != 0 ){
-                    ArrayList<ArrayList<Custom1>> list1 = new ArrayList<>();
-                        System.out.println("Danh sách bạn vừa mới nhập là : ");
-                        for (int i = 0; i < list.size(); i++) {
-                            Custom1 inputTest = list.get(i);
-                            System.out.println("%Mã bài viết     : " + inputTest.getSkd());
-                            System.out.println("Tiêu đề bài viết : " + inputTest.getTitle());
-                            System.out.println("Mô tả            : " + inputTest.getDescribe());
-                            System.out.println("Ảnh đại diện     : " + inputTest.getAvatar());
-                            System.out.println("Nội dung chính   : " + inputTest.getMainContent());
-                            System.out.println("Tên tác giả      : " + inputTest.getAuthor());
-                            System.out.println("Ngày viết        : " + inputTest.getDate());
-                            System.out.println("==================================================================================================================================================");
-                        }
-                    //                        custom.toString();
+                if (list.size() == 0) {
+                    System.out.println("Vui lòng nhập dữ liệu để hiển thị !!!");
+                }else {
+                    System.out.println("==================================================================================================================================================");
+                    System.out.println("Số lần thêm mới là " + list.size());
+                    for (int i = 0; i < list.size(); i++) {
+                        Custom1 inputTest = list.get(i);
+                        System.out.println("==================================================================================================================================================");
+                        System.out.println("Mã bài viết      : " + inputTest.getSkd());
+                        System.out.println("Tiêu đề bài viết : " + inputTest.getTitle());
+                        System.out.println("Mô tả            : " + inputTest.getDescribe());
+                        System.out.println("Ảnh đại diện     : " + inputTest.getAvatar());
+                        System.out.println("Nội dung chính   : " + inputTest.getMainContent());
+                        System.out.println("Tên tác giả      : " + inputTest.getAuthor());
+                        System.out.println("Ngày viết        : " + inputTest.getDate());
+                        System.out.println("==================================================================================================================================================");
+                    }
+                }
+                break;
                 }else {
                     System.out.println("Vui lòng nhập để hiển thị !!!");
                 }
